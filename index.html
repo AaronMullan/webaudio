@@ -1,58 +1,95 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Web Audio Basics</title>
-  <meta name="description" content="Audio basics demo for Web Audio API">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Goofing on Web Audio</title>
+    <meta name="description" content="Audio basics demo for Web Audio API" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div>
+    <p>      .__________________________.<br/>
+      | .___________________. |==|<br/>
+      | |                   | |  |<br/>
+      | |                   | |  |<br/>
+      | |       Aaron       | |  |<br/>
+      | |       Mullan      | |  |<br/>
+      | |                   | |  |<br/>
+      | |         PDX       | |  |<br/>
+      | | ]                 | | ,|<br/>
+      | !___________________! |(c|<br/>
+      !_______________________!__!<br/>
+      |    ___ -=      ___ -= | ,|<br/>
+      | ---[_]---   ---[_]--- |(c|<br/>
+      !_______________________!__!<br/>
+     /                            \<br/>
+    /  <span class='Sharps'>[][]  [][][]  [][] [][][] </span>  \<br/>
+   /  <span class='Naturals'>[][][][][][][][][][][][][][]  </span>\<br/>
+  ( [][][][][____________][][][][][] )<br/>
+   \ ------------------------------ /<br/>
+    \______________________________/
+    <br/><br/>
 
-<div id="boombox">
-	<div class="boombox-handle"></div>
+        <section class="master-controls">
+          <input
+            type="range"
+            id="volume"
+            class="control-volume"
+            min="0"
+            max="2"
+            value="1"
+            list="gain-vals"
+            step="0.01"
+            data-action="volume"
+          />
+          <datalist id="gain-vals">
+            <option value="0" label="min"> </option>
+            <option value="2" label="max"> </option>
+          </datalist>
 
-	<div class="boombox-body">
+          <label for="volume">VOL</label>
 
-		<section class="master-controls">
-			<input type="range" id="volume" class="control-volume" min="0" max="2" value="1" list="gain-vals" step="0.01" data-action="volume" />
-			<datalist id="gain-vals">
-				<option value="0" label="min">
-				<option value="2" label="max">
-			</datalist>
-			<label for="volume">VOL</label>
+          <input
+            type="range"
+            id="panner"
+            class="control-panner"
+            list="pan-vals"
+            min="-1"
+            max="1"
+            value="0"
+            step="0.01"
+            data-action="panner"
+          />
+          <datalist id="pan-vals">
+            <option value="-1" label="left"> </option>
+            <option value="1" label="right"> </option>
+          </datalist>
 
-			<input type="range" id="panner" class="control-panner" list="pan-vals" min="-1" max="1" value="0" step="0.01" data-action="panner" />
-			<datalist id="pan-vals">
-				<option value="-1" label="left">
-				<option value="1" label="right">
-			</datalist>
-			<label for="panner">PAN</label>
+          <label for="panner">PAN</label>
+        </section>
 
-			<button class="control-power" role="switch" aria-checked="false" data-power="on">
-				<span>On/Off</span>
-			</button>
-		</section>
+        <section class="tape">
+          <audio src="ibo.mp3" crossorigin="anonymous"></audio>
 
-		<section class="tape">
+          <!-- 			type="audio/mpeg" -->
 
-			<audio src="ibo.mp3" crossorigin="anonymous" ></audio>
-
-<!-- 			type="audio/mpeg" -->
-
-			<button data-playing="false" class="tape-controls-play" role="switch" aria-checked="false">
-				<span>Play/Pause</span>
-			</button>
-		</section>
-
-	</div><!-- boombox-body -->
-</div>
-
-<script src="app.js">
-
-</script>
-
-</body>
+          <button
+            data-playing="false"
+            class="tape-controls-play"
+            role="switch"
+            aria-checked="false"
+          >
+            <span>Play/Pause</span>
+          </button>
+        </section>
+   </div>
+  </div>
+    <script src="app.js"></script>
+  </body>
 </html>
-
