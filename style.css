@@ -14,15 +14,75 @@ body {
 #container{
 display: flex;
   width: 100vw;
-  justify-content: space-around;;
+  justify-content: space-around;
 }
-
+.ascii {  
+  display:flex;
+  justify-content: space-around;
+}
 .master-controls{
   display: flex;
   justify-content: space-around;
 }
 
+input[type="range"]{
+  -webkit-appearance:none;
+  width:160px;
+  height:20px;
+  margin:10px 50px;
+  background: linear-gradient(to right, #51bdd4  0%, #b96888 100%);
+  background-size:150px 10px;
+  background-position:center;
+  background-repeat:no-repeat;
+  overflow:hidden;
+  outline: none;
+}
 
+input[type="range"]::-webkit-slider-thumb{
+  -webkit-appearance:none;
+  width:12px;
+  height:12px;
+  background:#eb4546;
+  position:relative;
+  z-index:3;
+  box-shadow:0 0 5px 0 rgba(0,0,0,0.3);
+}
+
+.tape-controls-play{
+  width:150px;
+  height:40px;
+  text-align:center;
+  color:#b96888;
+  position:relative;
+  overflow:hidden;
+  // background-color: #2a607b;
+}
+
+input[type="button"]{
+  cursor:pointer;
+}
+
+// input[type="button"].clicked:before{
+//   content:" ";
+//   width:150px;
+//   height:40px;
+//   background:#eb4546;
+//   position:absolute;
+//   left:-150px;
+//   z-index:-1;
+// }
+
+// .button.clicked:after{
+//   content:"completed";
+//   width:150px;
+//   height:40px;
+//   background:#b96888;
+//   position:absolute;
+//   left:-75px;
+//   margin-left:50%;
+//   top:-40px;
+//   z-index:1;
+// }
 
 .Sharps {
   color:#b96888

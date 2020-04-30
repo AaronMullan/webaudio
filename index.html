@@ -14,6 +14,7 @@
   <body>
     <div id="container">
       <div>
+      <div class="ascii">
     <p>      .__________________________.<br/>
       | .___________________. |==|<br/>
       | |                   | |  |<br/>
@@ -21,7 +22,7 @@
       | |       Aaron       | |  |<br/>
       | |       Mullan      | |  |<br/>
       | |                   | |  |<br/>
-      | |         PDX       | |  |<br/>
+      | |       <range class="tape-controls-play">Play</range>        | |  |<br/>
       | | ]                 | | ,|<br/>
       | !___________________! |(c|<br/>
       !_______________________!__!<br/>
@@ -34,9 +35,12 @@
   ( [][][][][____________][][][][][] )<br/>
    \ ------------------------------ /<br/>
     \______________________________/
-    <br/><br/>
+    
+  </div>
 
         <section class="master-controls">
+          <div>
+          <label for="volume">VOL</label>
           <input
             type="range"
             id="volume"
@@ -52,9 +56,10 @@
             <option value="0" label="min"> </option>
             <option value="2" label="max"> </option>
           </datalist>
+        </div>
 
-          <label for="volume">VOL</label>
-
+        <div>
+          <label for="panner">PAN</label>
           <input
             type="range"
             id="panner"
@@ -71,24 +76,11 @@
             <option value="1" label="right"> </option>
           </datalist>
 
-          <label for="panner">PAN</label>
-        </section>
-
-        <section class="tape">
+        </div>
           <audio src="ibo.mp3" crossorigin="anonymous"></audio>
-
           <!-- 			type="audio/mpeg" -->
-
-          <button
-            data-playing="false"
-            class="tape-controls-play"
-            role="switch"
-            aria-checked="false"
-          >
-            <span>Play/Pause</span>
-          </button>
         </section>
-   </div>
+      </div>
   </div>
     <script src="app.js"></script>
   </body>
